@@ -20,18 +20,14 @@
 <script>
 import { mapState } from "vuex";
 
-import youtube from "../assets/youtube.svg";
-import vk from "../assets/vk.svg";
-import telegram from "../assets/telegram.svg";
-import twitter from "../assets/twitter.svg";
-import twitch from "../assets/twitch.svg";
+import { images } from "../constants";
 
 export default {
   name: "Profile",
 
   data() {
     return {
-      images: {}
+      images
     };
   },
 
@@ -41,13 +37,6 @@ export default {
 
   mounted: function() {
     this.$store.dispatch("getUserData");
-    this.images = {
-      youtube,
-      vk,
-      telegram,
-      twitter,
-      twitch
-    };
   }
 };
 </script>
